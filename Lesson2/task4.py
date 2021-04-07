@@ -10,5 +10,5 @@ for word in words:
     if len(word) < 10:
         print(num, word)
     else:
-        print(num, word[0:10])
+        print(num, word[:10])
     num += 1

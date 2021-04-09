@@ -40,6 +40,7 @@ while True:
             },
         )
     )
+
 print(items)
 
 data = {
@@ -50,13 +51,8 @@ data = {
 }
 
 for item in items:
-    d = item[1]
-    if not d['название'] in data['название']:
-        data['название'].append(d['название'])
-    if not d['цена'] in data['цена']:
-        data['цена'].append(d['цена'])
-    if not d['количество'] in data['количество']:
-        data['количество'].append(d['количество'])
-    if not d['ед'] in data['ед']:
-        data['ед'].append(d['ед'])
+    for key in data.keys():
+        if not item[1][key] in data[key]:
+            data[key].append(item[1][key])
+
 print(data)

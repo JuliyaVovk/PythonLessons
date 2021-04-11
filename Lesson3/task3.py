@@ -15,12 +15,19 @@ def my_func(a, b, c):
     return a + a
 
 
-print('pass' if my_func(1, 1, 1) == 2 else 'fail')
-print('pass' if my_func(1, 2, 3) == 5 else 'fail')
-print('pass' if my_func(1, 3, 2) == 5 else 'fail')
-print('pass' if my_func(3, 2, 1) == 5 else 'fail')
-print('pass' if my_func(2, 1, 2) == 4 else 'fail')
-print('pass' if my_func(2, 1, 1) == 3 else 'fail')
-print('pass' if my_func(-1, 0, 1) == 1 else 'fail')
-print('pass' if my_func(-2, -1, 0) == -1 else 'fail')
-print('pass' if my_func(0, 2, 10) == 12 else 'fail')
+for t in [
+    {'a': 1, 'b': 1, 'c': 1, 'expected': 2},
+    {'a': 1, 'b': 2, 'c': 3, 'expected': 5},
+    {'a': 1, 'b': 3, 'c': 2, 'expected': 5},
+    {'a': 3, 'b': 2, 'c': 1, 'expected': 5},
+    {'a': 2, 'b': 1, 'c': 2, 'expected': 4},
+    {'a': 2, 'b': 1, 'c': 1, 'expected': 3},
+    {'a': -1, 'b': 0, 'c': 1, 'expected': 1},
+    {'a': -2, 'b': -1, 'c': 0, 'expected': -1},
+    {'a': 0, 'b': 2, 'c': 10, 'expected': 12},
+]:
+    actual = my_func(t['a'], t['b'], t['c'])
+    if t['expected'] == actual:
+        print('Pass')
+    else:
+        print(f"Fail! Expected {t['expected']}, got {actual}")

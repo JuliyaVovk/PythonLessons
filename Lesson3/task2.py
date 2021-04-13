@@ -8,17 +8,17 @@
 
 def user_data(name='', last_name='', city='', year_ob=0, mail='', phone=''):
     data = []
-    if name != '':
+    if name:
         data.append(f'Имя: {name}')
-    if last_name != '':
+    if last_name:
         data.append(f'Фамилия: {last_name}')
-    if year_ob != 0:
+    if year_ob:
         data.append(f'Год рождения: {year_ob}')
-    if city != '':
+    if city:
         data.append(f'Город проживания: {city}')
-    if mail != '':
+    if mail:
         data.append(f'E-mail: {mail}')
-    if phone != '':
+    if phone:
         data.append(f'Телефон: {phone}')
     print(', '.join(data))
 

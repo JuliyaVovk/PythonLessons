@@ -1,0 +1,5 @@
+Apple ООО 10000 5000
+Google INC 12000 17000
+Facebook LLC 15000 3000
+Instagram FOP 9000 14500
+Twitter LLC 5050 1250

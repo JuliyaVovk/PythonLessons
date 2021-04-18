@@ -1,0 +1,12 @@
+[
+    {
+        "Apple": 5000.0,
+        "Google": -5000.0,
+        "Facebook": 12000.0,
+        "Instagram": -5500.0,
+        "Twitter": 3800.0
+    },
+    {
+        "average_profit": 5525.0
+    }
+]
